@@ -22,7 +22,7 @@ trait Session {
 
 object MarsApi extends AnyRef with LazyLogging {
   private implicit val scalaCache = ScalaCache(GuavaCache())
-  private val baseUrl = "http://52.33.35.165:8080/api"
+  private val baseUrl = "http://58.67.219.55:8080/api"
 
   private def POST(route: String) = Http(baseUrl + route).timeout(10000, 10000).method("POST")
   private def GET(route: String)  = Http(baseUrl + route).timeout(10000, 10000).method("GET")
