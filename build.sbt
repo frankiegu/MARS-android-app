@@ -22,6 +22,8 @@ resolvers ++= Seq(
 
 // android support libs
 val androidSupportV = "23.2.0"
+useProguard := true
+dexMulti := true
 libraryDependencies ++= Seq(
   "com.android.support" % "design"          % androidSupportV,
   "com.android.support" % "appcompat-v7"    % androidSupportV,
