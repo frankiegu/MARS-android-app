@@ -1,6 +1,7 @@
 scalaVersion := "2.11.8"
 scalacOptions += "-Xexperimental"
 
+enablePlugins(AndroidApp)
 packagingOptions := PackagingOptions(
   excludes =
     "META-INF/notice.txt" ::
@@ -21,7 +22,9 @@ resolvers ++= Seq(
 )
 
 // android support libs
+platformTarget := "android-23"
 val androidSupportV = "23.2.0"
+javacOptions in Compile ++= "-source" :: "1.7" :: "-target" :: "1.7" :: Nil
 useProguard := true
 dexMulti := true
 libraryDependencies ++= Seq(
